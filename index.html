@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <link rel="shortcut icon" href="images/dice-icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Loading screen -->
+        <div class="dice-load" id="dice-load">
+            <img src="images/dice-load.gif" alt="Loading...">
+        </div>
+
+        <!-- nav-bar -->
+        <nav class="nav-bar">
+            <div class="nav-menu" id="nav-menu">
+                <a id="home-toggle" href="#">Home</a>
+                <a href="#" id="rules-toggle">Rules</a>
+            </div>
+            <i class="hamburger ri-menu-line" id="hamburger"></i>
+        </nav>
+
+        <!-- player-box -->
+        <div class="player-container" id="player-container">
+            <div class="player-1" id="player-1"></div>
+            <div class="player-2" id="player-2"></div>
+        </div>
+
+        <!-- Rule-book -->
+        <div class="rules" id="rules">
+            <h2>Game Rules<br><br></h2>
+            <i class="rules-close ri-close-fill"></i>
+            <p>By pressing the "Click Me" button<br> you'll roll both dice.</p>
+            <p>If Player 1 gets a bigger value on dice<br>🎲 "Player 1 is the Win" 🎲</p>
+            <p>If Player 2 gets a bigger value on dice<br>🎲 "Player 2 is the Win" 🎲</p>
+            <p>If both players get the same value<br>🎲 It's a tie! 🎲</p>
+            <p>The game ends when either player wins 5 times.<br>The player who reaches 5 wins first<br>🎲 That is the
+                overall
+                winner! 🎲</p>
+        </div>
+
+        <div class="dice-roll" id="dice-roll"></div>
+
+        <div class="dice-main" id="dice-main">
+            <img id="dice-main-load" src="images/dice-dis.gif" alt="Dice Animation">
+            <div class="click" id="click-me">Play</div>
+        </div>
+
+        <div class="result" id="result"></div>
+
+        <div class="click" id="click-again">Click me to play again</div>
+
+        <!-- Score Box -->
+        <div class="score-box">
+            <h2>Score</h2>
+            <div class="player-score">
+                <div class="score-1">
+                    <p>Player 1</p>
+                    <span id="score-1">0</span>
+                </div>
+                <div class="score-2">
+                    <p>Player 2</p>
+                    <span id="score-2">0</span>
+                </div>
+            </div>
+        </div>
+        <!-- winner-card -->
+        <div class="winner-card" id="winner-card">
+            <div class="winner-icon">
+                🏆
+            </div>
+            <h2 id="winner-name"></h2>
+            <button class="click" id="play-again">Play Again</button>
+        </div>
+        <!-- redirect box -->
+        <div class="redirect-box">
+            <button class="redirect">
+                <p class="tooltip">Click On Me I'll Redirect You to Homepage</p>
+                <a href="https://github.com/raunakkaushal" target="_blank"><img src="images/hacker.png" alt=""
+                        width="40px" height="40px"></a>
+            </button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
